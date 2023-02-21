@@ -18,19 +18,15 @@ class Player:
         if keys[pygame.K_w]:
             self.x += player_speed * cos_a
             self.y += player_speed * sin_a
-            print('W')
         if keys[pygame.K_s]:
             self.x += -player_speed * cos_a
             self.y += -player_speed * sin_a
-            print('S')
         if keys[pygame.K_a]:
             self.x += player_speed * sin_a
             self.y += -player_speed * cos_a
-            print('A')
         if keys[pygame.K_d]:
             self.x += -player_speed * sin_a
             self.y += player_speed * cos_a
-            print('D')
         if keys[pygame.K_LEFT]:
             self.angle -= 0.02
         if keys[pygame.K_RIGHT]:

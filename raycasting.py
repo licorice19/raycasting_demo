@@ -15,8 +15,8 @@ def raycasting(sc, player_pos, player_angle):
             if (x // TILE * TILE, y // TILE * TILE) in world_map:
                 depth *= math.cos(player_angle - cur_angle)
                 proj_height = PROJ_COEFF / depth
-                c = 255 / (1 + depth * depth * 0.0001)
-                color = (c//2,c//1,c)
+                c = 255 / (1 + depth * depth * 0.00002)
+                color = (c,c//2,c//2)
                 pygame.draw.rect(sc, color, (ray * SCALE, HALF_HEIGHT - proj_height // 2, SCALE, proj_height))
                 break
         cur_angle += DELTA_ANGLE
